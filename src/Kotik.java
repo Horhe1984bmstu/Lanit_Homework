@@ -3,13 +3,14 @@ public class Kotik
 {
     String name;
     String color;
-    int satiety;
-    double activity; // по шкале от 0 до 5 (включительно)
-    int weight;
-    int fatigue;
+    int satiety;     // сытость
+    double activity; // активность по шкале от 0 до 5 (включительно) - влияет на успех в охоте и производстве других котиков
+    int weight;      // вес
+    int fatigue;     // усталость - можно было связать со сном, весом, активностью и действиями, но не стал усложнять
 
     int cats, crap, mouses, sofa_trying, Zzzz, crush;
-
+    // съев мышь, может дольше продержаться без обеда
+    // когда голодный может драть диван
 
     public  Kotik (String name, String color, int satiety, double activity, int weight, int fatigue )
     {
@@ -25,7 +26,7 @@ public class Kotik
     {
         for (int i = 0;i < 24; i++)
         {
-            switch  ((int) (Math.random() * 6+1)) {
+            switch  ((int) (Math.random() * 6 + 1)) {
 
                 case 1:
                     if (satiety > 5)
@@ -69,7 +70,7 @@ public class Kotik
 
         }
 
-        //=====================================================================================
+    //=====================================================================================
     }
     void eat(int food)
     {
@@ -150,7 +151,6 @@ public class Kotik
         System.out.println("Достижения за день, сытость:" + satiety);
         System.out.println("Достижения за день, бодрость:" + fatigue);
         System.out.println("=====================================|");
-
         System.out.println("Главное достижение:" + cats);
         System.out.println("Достижения в лотке:" + crap);
         System.out.println("Пойманных мышей:" + mouses);
