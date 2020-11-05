@@ -10,7 +10,7 @@ public class Kotik
 
     int cats, crap, mouses, sofa_trying, Zzzz, crush;
     // съев мышь, может дольше продержаться без обеда
-    // когда голодный может драть диван
+    // когда голодный может продолжать драть диван и ходить в лоток
 
     public  Kotik (String name, String color, int satiety, double activity, int weight, int fatigue )
     {
