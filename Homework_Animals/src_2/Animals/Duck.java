@@ -20,21 +20,21 @@ public class Duck extends Herbivore implements FlyingAnimals
 
     public void move() {System.out.println("Утка плавает по воде");}
     public void voice() {System.out.println("Раздается довольное кряканье");}
-    public Method eat(Object Herbivore_food)
+    public Method eat(Object Food)
     {
         move();
         try {
-            Field field = Herbivore_food.getClass().getDeclaredField("TYPE_OF_FOOD");
-            String value = (String) field.get(Herbivore_food);
+            Field field = Food.getClass().getDeclaredField("TYPE_OF_FOOD");
+            String value = (String) field.get(Food);
 
             if (value.equals("For Herbivore"))
             {
                 System.out.println("Подходит для травоядных");
                 try
                 {
-                    Method method = Herbivore_food.getClass().getDeclaredMethod("was_eaten");
+                    Method method = Food.getClass().getDeclaredMethod("was_eaten");
                     method.setAccessible(true);
-                    method.invoke(Herbivore_food);
+                    method.invoke(Food);
                 }
                 catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e)
                 {

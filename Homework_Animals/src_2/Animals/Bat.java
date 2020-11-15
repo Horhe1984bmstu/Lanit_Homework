@@ -18,21 +18,21 @@ public class Bat extends Carnivorous implements NocturnalActiveAnimal, FlyingAni
 
 public void move() {System.out.println("Мышь летает над лесом");}
 public void voice() {System.out.println("Раздается криповый хруст в ночи");}
-public Method eat(Object Herbivore_food)
+public Method eat(Object Food)
         {
         move();
         try {
-        Field field = Herbivore_food.getClass().getDeclaredField("TYPE_OF_FOOD");
-        String value = (String) field.get(Herbivore_food);
+        Field field = Food.getClass().getDeclaredField("TYPE_OF_FOOD");
+        String value = (String) field.get(Food);
 
         if (value.equals("For Carnivorous"))
         {
         System.out.println("Подходит для хищников");
         try
         {
-        Method method = Herbivore_food.getClass().getDeclaredMethod("was_eaten");
+        Method method = Food.getClass().getDeclaredMethod("was_eaten");
         method.setAccessible(true);
-        method.invoke(Herbivore_food);
+        method.invoke(Food);
         }
         catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e)
         {
