@@ -6,23 +6,17 @@ import java.lang.reflect.Method;
 
 public class Lemure extends Herbivore
 {
-    private String Animal_name = "Лемур";
+    public String name;
+    public int size;
 
-    public String setAnimal_name(String Name)
-    {
-        if (Name.equals("Lemur") || Name.equals("Maki"))
-        {
-            Animal_name = Name;
-        }
-        return Animal_name;
-    }
-
-    public Lemure(int speed, int activity, int disguise_and_flair)
+    public Lemure  (String name, int size, int speed, int activity, int disguise_and_flair)
     {
         super(speed, activity, disguise_and_flair);
+        this.name = name;
+        this.size = size;
     }
 
-    public void move() {System.out.println("Лемур лезет на дерево");}
+    public void move() {System.out.println("Лимур лезет на дерево");}
     public void voice() {System.out.println("Раздается довольное урчание");}
     public Method eat(Object Herbivore_food)
     {
@@ -47,13 +41,9 @@ public class Lemure extends Herbivore
 
                 voice();
             }
-            else
-            {
-                System.out.println("Не подходит для травоядных");
-                System.out.println("Лемур вежливо отказался это есть" );
-            }
+            else throw new WrongFoodException ("Не подходит для травоядных, лимур вежливо отказался это есть.", value);
         }
-        catch (NoSuchFieldException | IllegalAccessException e)
+        catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
             e.printStackTrace();
         }

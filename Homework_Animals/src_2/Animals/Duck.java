@@ -4,18 +4,15 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Duck extends Herbivore
+public class Duck extends Herbivore implements FlyingAnimals
 {
-    private String Animal_name = "Утка";
-
-    public String setAnimal_name(String Name)
+    public String name;
+    public Duck  (String name, int speed, int activity, int disguise_and_flair)
     {
-        if (Name.equals("Ente") || Name.equals("Canard"))
-        {
-            Animal_name = Name;
-        }
-        return Animal_name;
+        super(speed, activity, disguise_and_flair);
+        this.name = name;
     }
+
     public Duck (int speed, int activity, int disguise_and_flair)
     {
         super(speed, activity,disguise_and_flair );
@@ -46,13 +43,9 @@ public class Duck extends Herbivore
 
                 voice();
             }
-            else
-            {
-                System.out.println("Не подходит для травоядных");
-                System.out.println("Утка вежливо отказался это есть");
-            }
+            else throw new WrongFoodException ("Не подходит для травоядных, утка вежливо отказалась это есть.", value);
         }
-        catch (NoSuchFieldException | IllegalAccessException e)
+        catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
             e.printStackTrace();
         }
@@ -61,5 +54,11 @@ public class Duck extends Herbivore
         return null;
     }
 
+    @Override
+    public void Flying() {
+        System.out.println("Скорость утки в полете увеличивается многократно");
+        speed *= 20;
+        System.out.println(speed);
+    }
 }
 

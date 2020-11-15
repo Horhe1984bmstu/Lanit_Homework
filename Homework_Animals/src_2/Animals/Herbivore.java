@@ -4,7 +4,6 @@ package Animals;
 public abstract class Herbivore extends Animals
 {
     int disguise_and_flair;
-
     public Herbivore (int speed, int activity, int disguise_and_flair)
     {
         super(speed, activity);

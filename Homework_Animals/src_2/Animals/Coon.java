@@ -4,22 +4,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Coon extends Carnivorous
+public class Coon extends Carnivorous implements NocturnalActiveAnimal, TerritorialAnimals
 {
-    private String Animal_name = "Енот";
+    public String name;
+    public int size;
 
-    public String setAnimal_name(String Name)
-    {
-        if (Name.equals("Waschbär") || Name.equals("Raton_laveur"))
-        {
-            Animal_name = Name;
-        }
-        return Animal_name;
-    }
-
-    public Coon(int speed, int activity, int tooth_and_nails)
+    public Coon (String name, int size, int speed, int activity, int tooth_and_nails)
     {
         super(speed, activity, tooth_and_nails);
+        this.name = name;
+        this.size = size;
     }
 
     public void move() {System.out.println("Енот потрошит холодильник");}
@@ -47,19 +41,39 @@ public class Coon extends Carnivorous
 
                 voice();
             }
-            else
-                {
-                System.out.println("Не подходит для хищников");
-                System.out.println("Енот вежливо отказался это есть" );
-                }
+            else throw new WrongFoodException ("Не подходит для хищников, енот вежливо отказался это есть.", value);
             }
-        catch (NoSuchFieldException | IllegalAccessException e)
+
+        catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
             e.printStackTrace();
         }
-
-
         return null;
     }
 
+
+    @Override
+    public void activityIncreasing() {
+        System.out.println("Енот ночной охотник, его активность повышается ночью");
+        activity *= 2;
+        System.out.println(activity);
+    }
+
+    @Override
+    public void silentMoving() {
+        System.out.println("Когда енот крадётся его скорость снижается, но повышается эффективность нападения");
+        speed -= 2;
+        tooth_and_nails +=3;
+        System.out.println(speed);
+    }
+
+    @Override
+    public void territoryControl(double square) {
+        System.out.println("Енот может контролировать территорию размером" +square+ "м.кв.");
+    }
+
+    @Override
+    public void driveoffIntruder() {
+        System.out.println("Раздается устрашающее шипение... Нарушитель в панике покидает территорию");
+    }
 }

@@ -6,20 +6,12 @@ import java.lang.reflect.Method;
 
 public class Giraffe extends Herbivore
 {
-    private String Animal_name = "Жираф";
+    public String name;
 
-    public String setAnimal_name(String Name)
-    {
-        if (Name.equals("Giraffe") || Name.equals("Girafe"))
-        {
-            Animal_name = Name;
-        }
-        return Animal_name;
-    }
-
-    public Giraffe (int speed, int activity, int disguise_and_flair)
+    public Giraffe  (String name, int speed, int activity, int disguise_and_flair)
     {
         super(speed, activity, disguise_and_flair);
+        this.name = name;
     }
 
     public void move() {System.out.println("Жираф гуляет по саванне");}
@@ -47,13 +39,9 @@ public class Giraffe extends Herbivore
 
                 voice();
             }
-            else
-            {
-                System.out.println("Не подходит для травоядных");
-                System.out.println("Жираф вежливо отказался это есть" );
-            }
+            else throw new WrongFoodException ("Не подходит для травоядных, жираф вежливо отказался это есть.", value);
         }
-        catch (NoSuchFieldException | IllegalAccessException e)
+        catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
             e.printStackTrace();
         }

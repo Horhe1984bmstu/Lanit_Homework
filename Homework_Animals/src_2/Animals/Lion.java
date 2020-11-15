@@ -4,22 +4,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Lion extends Carnivorous
+public class Lion extends Carnivorous implements TerritorialAnimals
 {
-    private String Animal_name = "Лев";
+    public String name;
+    public int size;
 
-    public String setAnimal_name(String Name)
-    {
-    if (Name.equals("ein_Löwe") || Name.equals("un_Lion"))
-        {
-        Animal_name = Name;
-        }
-    return Animal_name;
-    }
-
-    public Lion (int speed, int activity, int tooth_and_nails)
+    public Lion (String name, int size, int speed, int activity, int tooth_and_nails)
     {
         super(speed, activity, tooth_and_nails);
+        this.name = name;
+        this.size = size;
     }
 
     public void move() {System.out.println("Лев гуляет по саванне");}
@@ -47,19 +41,25 @@ public class Lion extends Carnivorous
 
                 voice();
             }
-            else
-            {
-                System.out.println("Не подходит для хищников");
-                System.out.println("Льву такое лучше не предлагать" );
-            }
+            else throw new WrongFoodException ("Не подходит для хищников, льву такое лучше не предлагать.", value);
         }
-        catch (NoSuchFieldException | IllegalAccessException e)
+        catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
             e.printStackTrace();
         }
 
-
         return null;
     }
 
+    @Override
+    public void territoryControl(double square)
+    {
+        System.out.println("Лев может контролировать территорию размером" +square+ "м.кв.");
+    }
+
+    @Override
+    public void driveoffIntruder()
+    {
+        System.out.println("Лучше не провоцировать... Нарушитель в панике покидает территорию (иногда по частям)");
+    }
 }
