@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -30,7 +30,7 @@ public class Coon extends Carnivorous implements NocturnalActiveAnimal, Territor
                 System.out.println("Подходит для хищников");
                 try
                 {
-                Method method = Food.getClass().getDeclaredMethod("was_eaten");
+                Method method = Food.getClass().getDeclaredMethod("wasEaten");
                     method.setAccessible(true);
                     method.invoke(Food);
                 }
@@ -51,7 +51,6 @@ public class Coon extends Carnivorous implements NocturnalActiveAnimal, Territor
         return null;
     }
 
-
     @Override
     public void activityIncreasing() {
         System.out.println("Енот ночной охотник, его активность повышается ночью");
@@ -61,7 +60,7 @@ public class Coon extends Carnivorous implements NocturnalActiveAnimal, Territor
 
     @Override
     public void silentMoving() {
-        System.out.println("Когда енот крадётся его скорость снижается, но повышается эффективность нападения");
+        System.out.println("Когда енот крадётся, его скорость снижается, но повышается эффективность нападения");
         speed -= 2;
         tooth_and_nails +=3;
         System.out.println(speed);

@@ -1,6 +1,6 @@
-package Animal_food;
+package animal_food;
 
-public class Plants extends Herbivore_food
+public class Plants extends HerbivoreFood
 
 {
     final public String TYPE_OF_FOOD = "For Herbivore";
@@ -8,7 +8,7 @@ public class Plants extends Herbivore_food
     {
         super (calories, delicacy, juiciness);
     }
-    public void was_eaten()
+    public void wasEaten()
     {
         System.out.println("Съел растение");
     }

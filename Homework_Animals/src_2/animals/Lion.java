@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -30,7 +30,7 @@ public class Lion extends Carnivorous implements TerritorialAnimals
                 System.out.println("Подходит для хищников");
                 try
                 {
-                    Method method = Food.getClass().getDeclaredMethod("was_eaten");
+                    Method method = Food.getClass().getDeclaredMethod("wasEaten");
                     method.setAccessible(true);
                     method.invoke(Food);
                 }

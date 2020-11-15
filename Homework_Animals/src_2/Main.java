@@ -1,11 +1,11 @@
-import Animal_food.Carnivorous_food;
-import Animal_food.Fruit;
-import Animal_food.Herbivore_food;
-import Animal_food.Meat;
-import Animals.Bat;
-import Animals.Coon;
-import Animals.Lemure;
-import Aviaries.Aviaries;
+import animal_food.CarnivorousFood;
+import animal_food.Fruit;
+import animal_food.HerbivoreFood;
+import animal_food.Meat;
+import animals.Bat;
+import animals.Coon;
+import animals.Lemure;
+import aviaries.Aviaries;
 
 public class Main {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException
@@ -24,8 +24,8 @@ public class Main {
         Coon coon_3 = new Coon("Пухлый",3, 2, 5, 4);
 
         Bat bat_1 = new Bat("Дракула",1,2, 5, 2);
-        Herbivore_food fruit_1 = new Fruit(150, 10, 8);
-        Carnivorous_food fruit_2 = new Meat(800, 10, 8);
+        HerbivoreFood fruit_1 = new Fruit(150, 10, 8);
+        CarnivorousFood fruit_2 = new Meat(800, 10, 8);
 
 /*
         Herbivore_aviaries A_1  = new Herbivore_aviaries(7);

@@ -1,15 +1,15 @@
-package Aviaries;
+package aviaries;
 
 import java.util.ArrayList;
 
-public class Herbivore_aviaries
+public class CarnivorousAviaries
 {
     public int capacity;
     int rev = 0;
 
     ArrayList<Object> arrayList = new ArrayList<>(10);
 
-    public Herbivore_aviaries(int capacity)
+    public CarnivorousAviaries(int capacity)
     {
         this.capacity = capacity;
     }

@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 import java.lang.reflect.Method;
 

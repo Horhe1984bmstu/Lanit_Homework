@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -32,7 +32,7 @@ public class Duck extends Herbivore implements FlyingAnimals
                 System.out.println("Подходит для травоядных");
                 try
                 {
-                    Method method = Food.getClass().getDeclaredMethod("was_eaten");
+                    Method method = Food.getClass().getDeclaredMethod("wasEaten");
                     method.setAccessible(true);
                     method.invoke(Food);
                 }

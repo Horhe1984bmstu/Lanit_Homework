@@ -1,21 +1,23 @@
-package Animals;
+package animals;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Giraffe extends Herbivore
+public class Lemure extends Herbivore
 {
     public String name;
+    public int size;
 
-    public Giraffe  (String name, int speed, int activity, int disguise_and_flair)
+    public Lemure  (String name, int size, int speed, int activity, int disguise_and_flair)
     {
         super(speed, activity, disguise_and_flair);
         this.name = name;
+        this.size = size;
     }
 
-    public void move() {System.out.println("Жираф гуляет по саванне");}
-    public void voice() {System.out.println("Раздается довольное чавканье");}
+    public void move() {System.out.println("Лимур лезет на дерево");}
+    public void voice() {System.out.println("Раздается довольное урчание");}
     public Method eat(Object Food)
     {
         move();
@@ -28,7 +30,7 @@ public class Giraffe extends Herbivore
                 System.out.println("Подходит для травоядных");
                 try
                 {
-                    Method method = Food.getClass().getDeclaredMethod("was_eaten");
+                    Method method = Food.getClass().getDeclaredMethod("wasEaten");
                     method.setAccessible(true);
                     method.invoke(Food);
                 }
@@ -39,7 +41,7 @@ public class Giraffe extends Herbivore
 
                 voice();
             }
-            else throw new WrongFoodException ("Не подходит для травоядных, жираф вежливо отказался это есть.", value);
+            else throw new WrongFoodException ("Не подходит для травоядных, лимур вежливо отказался это есть.", value);
         }
         catch (NoSuchFieldException | IllegalAccessException | WrongFoodException e)
         {
@@ -51,4 +53,3 @@ public class Giraffe extends Herbivore
     }
 
 }
-

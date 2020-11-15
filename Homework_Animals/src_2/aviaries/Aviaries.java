@@ -1,6 +1,6 @@
-package Aviaries;
+package aviaries;
 
-import Animals.Animals;
+import animals.Animals;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 

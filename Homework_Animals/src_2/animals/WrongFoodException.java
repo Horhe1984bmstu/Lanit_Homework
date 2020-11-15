@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class WrongFoodException extends Exception
 // там в дз ошибка - WorngFoodException вместо WrongFoodException

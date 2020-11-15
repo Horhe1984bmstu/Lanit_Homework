@@ -1,13 +1,13 @@
-package Animal_food;
+package animal_food;
 
-public class Meat extends Carnivorous_food
+public class Meat extends CarnivorousFood
 {
     final public String TYPE_OF_FOOD = "For Carnivorous";
     public Meat (int calories, int delicacy, int rigidity)
     {
         super (calories, delicacy, rigidity);
     }
-    void was_eaten()
+    void wasEaten()
     {
         System.out.println("Съел мясо");
     }

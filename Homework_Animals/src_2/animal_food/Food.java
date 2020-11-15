@@ -1,4 +1,4 @@
-package Animal_food;
+package animal_food;
 
 public abstract class Food
 {
@@ -10,6 +10,6 @@ public abstract class Food
         this.calories = calories;
         this.delicacy = delicacy;
     }
-    abstract void was_eaten();
+    abstract void wasEaten();
 
 }

@@ -1,13 +1,13 @@
-package Animal_food;
+package animal_food;
 
-public class Bugs extends Carnivorous_food
+public class Bugs extends CarnivorousFood
 {
     final public String TYPE_OF_FOOD = "For Carnivorous";
     public Bugs (int calories, int delicacy, int rigidity)
     {
         super (calories, delicacy, rigidity);
     }
-    public void was_eaten()
+    public void wasEaten()
     {
         System.out.println("Съел жука");
     }
