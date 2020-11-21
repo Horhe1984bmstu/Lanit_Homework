@@ -1,0 +1,46 @@
+${2020-11-22:12:50:38.491} [main] ERROR Main - error
+${2020-11-22:12:50:38.552} [main] FATAL Main - fatal
+${2020-11-22:12:50:38.630} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:12:50:38.630} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:12:50:38.632} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:12:50:38.632} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:12:50:38.633} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:12:50:38.633} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:12:50:38.633} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:12:50:38.633} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:12:50:38.634} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:12:50:38.634} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:12:50:38.635} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:12:50:38.635} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:12:52:24.545} [main] ERROR Main - error
+${2020-11-22:12:52:24.565} [main] FATAL Main - fatal
+${2020-11-22:12:52:24.590} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:12:52:24.590} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:12:52:24.593} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:12:52:24.593} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:12:52:24.595} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:12:52:24.595} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:12:52:24.596} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:12:52:24.596} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:12:52:24.597} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:12:52:24.597} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:12:52:24.598} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:12:52:24.598} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:01:25:24.416} [main] ERROR Main - error
+${2020-11-22:01:25:24.423} [main] FATAL Main - fatal
+${2020-11-22:01:25:24.427} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:01:25:24.427} [main] TRACE logger_01.LG - LG-trace
+${2020-11-22:01:25:24.430} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:01:25:24.430} [main] DEBUG logger_01.LG - LG-debug
+${2020-11-22:01:25:24.431} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:01:25:24.431} [main] INFO  logger_01.LG - LG-info
+${2020-11-22:01:25:24.432} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:01:25:24.432} [main] WARN  logger_01.LG - LG-warn
+${2020-11-22:01:25:24.433} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:01:25:24.433} [main] ERROR logger_01.LG - LG-error
+${2020-11-22:01:25:24.434} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:01:25:24.434} [main] FATAL logger_01.LG - LG-fatal
+${2020-11-22:01:25:24.450} [main] INFO  logger_01.LG - выполнен default метод в интерфейсе -ночные животные-
+${2020-11-22:01:25:24.450} [main] INFO  logger_01.LG - выполнен default метод в интерфейсе -ночные животные-
+${2020-11-22:01:25:24.452} [main] INFO  logger_01.LG - выполнен default метод в интерфейсе -ночные животные-
+${2020-11-22:01:25:24.452} [main] INFO  logger_01.LG - выполнен default метод в интерфейсе -ночные животные-
